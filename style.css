@@ -1,0 +1,67 @@
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+    }
+
+    .menu img.logo {
+      height: 200px; /* Ajuste o tamanho da logo */
+      margin-right: 20px;
+      border-radius: 100px;
+    }
+
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      display: flex;
+    }
+
+    .menu ul li {
+      margin: 0 15px
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background-color 0.3s;
+    }
+
+    .menu ul li a:hover {
+      background-color: #575757;
+      border-radius: 4px;
+    }
+
+    .secao{
+        background-color: bisque;
+        text-align: center;
+    }
+
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 15px;
+    }
+    /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+
+    .rodape{
+      background-color: rgb(158, 203, 157);
+    }

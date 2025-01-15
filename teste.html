@@ -1,0 +1,32 @@
+<form id="formUsuario">
+    <input type="text" name="nome" placeholder="Nome" required />
+    <input type="text" name="cpf" placeholder="CPF" required />
+    <input type="text" name="telefone" placeholder="Telefone" />
+    <input type="email" name="email" placeholder="Email" required />
+    <button type="submit">Salvar</button>
+  </form>
+  
+  <script>
+    const form = document.getElementById('formUsuario');
+  
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+  
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+  
+      try {
+        const response = await fetch('/usuarios', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+  
+        const result = await response.text();
+        alert(result);
+      } catch (error) {
+        console.error('Erro ao salvar os dados:', error);
+      }
+    });
+  </script>
+  
